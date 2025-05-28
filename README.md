@@ -7,7 +7,7 @@ A Discord bot that helps you find the highest Endless servers in **Guts and Blac
 I made this version (with permission) while the original bot was down.  
 
 Check out the original project here:  
-🔗 https://github.com/GutsAndCompSci/gncs-server-finder
+https://github.com/GutsAndCompSci/gncs-server-finder
 
 ## What it does
 
