@@ -2,7 +2,7 @@
 
 A Discord bot that helps you find the highest Endless servers in **Guts and Blackpowder** without digging through the in-game browser.
 
-> [Add Bot](https://discord.com/oauth2/authorize?client_id=1366418371343679548&permissions=8&integration_type=0&scope=bot+applications.commands)
+> [Add Bot](https://discord.com/oauth2/authorize?client_id=1366418371343679548&permissions=2048&integration_type=0&scope=bot+applications.commands)
 
 I made this version (with permission) while the original bot was down.  
 
