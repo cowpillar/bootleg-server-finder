@@ -1,4 +1,3 @@
-# Imports
 import os
 from pathlib import Path
 import discord
@@ -8,7 +7,6 @@ import re
 import asyncio
 import pyperclip
 
-# Token and file paths
 TOKEN = ""
 BASE_DIR = Path(__file__).resolve().parent
 JSON_PATH = BASE_DIR / "servers.json"
@@ -42,7 +40,7 @@ def save_servers(servers):
     except Exception as e:
         print(f"Failed to save: {e}")
 
-# Game data processing
+# Processing data
 def get_wave_number(game_mode_info):
     match = re.search(r"(\d+)[a-z]{2}\sWave", game_mode_info)
     if match: return int(match.group(1))
@@ -157,7 +155,7 @@ async def findserver(
 
     await interaction.response.send_message("**Top Endless Servers:**\n" + "\n".join(lines))
 
-# Game data copying
+# Copying data
 async def auto_process_loop():
     while True:
         for remaining in range(120, 0, -10):
@@ -175,7 +173,7 @@ async def auto_process_loop():
         else:
             print("No data.")
 
-# Status update
+# Update status
 async def status_loop():
     statuses = [discord.Status.online, discord.Status.idle, discord.Status.dnd]
     current_status_index = 0
@@ -211,14 +209,12 @@ async def status_loop():
 
         await asyncio.sleep(1)
 
-# Client startup
+# Bot startup
 @client.event
 async def on_ready():
     print(f"Logged in as {client.user} ({client.user.id})")
     asyncio.create_task(auto_process_loop())
     asyncio.create_task(status_loop())
 
-
-# Main
 if __name__ == "__main__":
     client.run(TOKEN)
